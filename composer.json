@@ -1,0 +1,21 @@
+{
+    "name": "krisanalfa/blade-theme",
+    "description": "Blade Theme Based on Zurb Foundation",
+    "license": "MIT",
+    "require": {
+        "krisanalfa/bono-blade": "dev-master",
+        "krisanalfa/blade-theme": "dev-master"
+    },
+    "authors": [
+        {
+            "name": "Krisan Alfa Timur",
+            "email": "krisan47@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-0": {
+            "KrisanAlfa\\Theme\\BladeFoundation": "src"
+        }
+    },
+    "minimum-stability": "dev"
+}

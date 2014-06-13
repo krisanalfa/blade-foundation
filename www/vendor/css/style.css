@@ -1,0 +1,18 @@
+body { font-family: "Lato", "Helvetica Neue", "Arial", serif, sans-serif; }
+.top-bar { font-family: "Lato", "Helvetica Neue", "Arial", serif, sans-serif; }
+.top-bar-section ul li a { font-family: "Lato", "Helvetica Neue", "Arial", serif, sans-serif; }
+h1, h2, h3, h4, h5, h6 { font-family: "Lato", "Helvetica Neue", "Arial", serif, sans-serif; }
+.button { font-family: "Lato", "Helvetica Neue", "Arial", serif, sans-serif; }
+button[type=submit] { font-family: "Lato", "Helvetica Neue", "Arial", serif, sans-serif; }
+
+.container { padding: 20px; }
+.reader { padding-top: 30px; }
+.action-container { padding-top: 45px; }
+.action-container .button { margin: 5px; }
+form fieldset button[type=submit] { margin-top: 10px; }
+
+.margin-bottom-5 { margin-bottom: 5px; }
+.table-wrapper table.search { margin-bottom: 0; }
+.nowrap thead tr th, .nowrap tbody tr td { white-space: nowrap; }
+.table-wrapper { overflow: auto; -webkit-overflow-scrolling: touch; }
+.top-bar-section ul li.has-dropdown ul.dropdown li.active a { background: #008cba; }

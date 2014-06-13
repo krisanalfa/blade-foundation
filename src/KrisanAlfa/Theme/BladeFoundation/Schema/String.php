@@ -1,14 +1,16 @@
 <?php namespace KrisanAlfa\Theme\BladeFoundation\Schema;
 
 use Bono\App;
-use Norm\Schema\Password as NormPassword;
+use Norm\Schema\String as NormString;
 
-class Password extends NormPassword
+class String extends NormString
 {
     public function formatInput($value, $entry = null)
     {
-        return App::getInstance()->theme->partial('_schema/password', array(
-            'self' => $this
+        return App::getInstance()->theme->partial('_schema/string', array(
+            'label' => $this['label'],
+            'name' => $this['name'],
+            'value' => htmlentities($value),
         ));
     }
 
@@ -17,7 +19,7 @@ class Password extends NormPassword
         return App::getInstance()->theme->partial('_schema/string', array(
             'label' => $this['label'],
             'name' => $this['name'],
-            'value' => '*hidden*',
+            'value' => htmlentities($value),
             'readonly' => true
         ));
     }

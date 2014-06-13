@@ -2,18 +2,13 @@
 <?php $schema = Norm::factory(f('controller.name'))->schema(); $first = true;?>
 <div class="row-fluid container">
     <div class="reader">
-        <div class="large-2 columns show-for-medium-up">
-            <div class="action-container">
-                <button class="button expand radius disabled secondary">Search</button>
-                <a href="{{ f('controller.url', '/null/create') }}" class="button expand radius">Create</a>
-            </div>
-        </div>
-        <div class="large-10 columns">
+        <div class="large-12 columns">
             <h1>{{ f('controller.name') }} list</h1>
-            <div class="hide-for-medium-up">
+            <div class="hide-for-large-only">
                 <a href="{{ f('controller.url', '/null/create') }}" class="button tiny radius margin-bottom-5">Create</a>
             </div>
             <div class="table-wrapper">
+                <a href="{{ f('controller.url', '/null/create') }}" class="button tiny radius create">Create New</a>
                 <table class="nowrap search">
                      <thead>
                          <tr>

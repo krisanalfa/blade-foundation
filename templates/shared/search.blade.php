@@ -23,7 +23,7 @@
                          @foreach ($entries as $entry)
                              <tr>
                                  @foreach ($schema as $name => $field)
-                                    @if(! $field['hidden'])
+                                    @if($field['hidden'] !== true)
                                         <td>
                                              @if(reset($schema) === $field)
                                                  <a href="{{ f('controller.url', '/'.$entry['$id']) }}">

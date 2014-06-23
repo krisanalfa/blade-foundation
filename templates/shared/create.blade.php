@@ -5,7 +5,7 @@
             <form method="POST">
                 <ul class="breadcrumbs">
                     <li><a href="{{ URL::base() }}">Home</a></li>
-                    <li><a href="{{ f('controller.url') }}">User</a></li>
+                    <li><a href="{{ f('controller.url') }}">{{ f('controller')->clazz }}</a></li>
                     <li class="current"><a href="{{ URL::current() }}">Create</a></li>
                 </ul>
                 <fieldset>

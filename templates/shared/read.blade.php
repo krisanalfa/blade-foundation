@@ -6,13 +6,13 @@
             <form>
                 <ul class="breadcrumbs">
                     <li><a href="{{ URL::base() }}">Home</a></li>
-                    <li><a href="{{ f('controller.url') }}">User</a></li>
+                    <li><a href="{{ f('controller.url') }}">{{ f('controller')->clazz }}</a></li>
                     <li class="current"><a href="{{ URL::current() }}">Read</a></li>
                 </ul>
                 <fieldset>
                     <legend>{{ f('controller.name') }}</legend>
                     @foreach ($schema as $name => $field)
-                        @if(! $field['hidden'])
+                        @if($field['hidden'] !== true)
                             <div class="row">
                                 <div class="large-2 columns">
                                     {{ $field->label() }}

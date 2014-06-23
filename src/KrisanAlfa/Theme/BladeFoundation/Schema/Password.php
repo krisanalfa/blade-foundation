@@ -7,7 +7,7 @@ class Password extends NormPassword
 {
     public function formatInput($value, $entry = null)
     {
-        return App::getInstance()->theme->partial((is_null($this->get('partial'))) ? '_schema/password' : $this->get('partial'), array(
+        return App::getInstance()->theme->partial($this->getPartialTemplate(), array(
             'label' => $this['label'],
             'name'  => $this['name'],
             'entry' => $entry,
@@ -19,7 +19,7 @@ class Password extends NormPassword
     {
         // Let's use String template to render readonly.
         // RW+ Password template has two columns (the 'password_confirmation' field).
-        return App::getInstance()->theme->partial((is_null($this->get('partial'))) ? '_schema/string' : $this->get('partial'), array(
+        return App::getInstance()->theme->partial($this->getPartialTemplate(), array(
             'label' => $this['label'],
             'name' => $this['name'],
             'value' => '*hidden*',
@@ -32,5 +32,16 @@ class Password extends NormPassword
         return ($plain) ? $plain : '<label>'.
             $this['label'] . (($this['filter-required']) ? ' <span class="mandatory-marker">*<span> ' : '').
         '</label>';
+    }
+
+    protected function getPartialTemplate()
+    {
+        $partialTemplate = '_schema/password';
+
+        if($this->get('partialTemplate')) {
+            $partialTemplate = $this->get('partialTemplate');
+        }
+
+        return $partialTemplate;
     }
 }

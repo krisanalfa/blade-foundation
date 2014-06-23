@@ -6,22 +6,20 @@
             <form method="POST">
                 <ul class="breadcrumbs">
                     <li><a href="{{ URL::base() }}">Home</a></li>
-                    <li><a href="{{ f('controller.url') }}">User</a></li>
+                    <li><a href="{{ f('controller.url') }}">{{ f('controller')->clazz }}</a></li>
                     <li class="current"><a href="{{ URL::current() }}">Update</a></li>
                 </ul>
                 <fieldset>
                     <legend>{{ f('controller.name') }}</legend>
                     @foreach ($schema as $name => $field)
-                        @if(! $field['hidden'])
-                            <div class="row">
-                                <div class="large-2 columns">
-                                    {{ $field->label() }}
-                                </div>
-                                <div class="large-10 columns">
-                                    {{ $field->formatInput($entry[$name], $entry) }}
-                                </div>
+                        <div class="row">
+                            <div class="large-2 columns">
+                                {{ $field->label() }}
                             </div>
-                        @endif
+                            <div class="large-10 columns">
+                                {{ $field->formatInput($entry[$name], $entry) }}
+                            </div>
+                        </div>
                     @endforeach
                     <div class="row">
                         <div class="large-12 columns">

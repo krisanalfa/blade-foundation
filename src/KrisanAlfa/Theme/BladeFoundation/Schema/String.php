@@ -7,7 +7,7 @@ class String extends NormString
 {
     public function formatInput($value, $entry = null)
     {
-        return App::getInstance()->theme->partial((is_null($this->get('partial'))) ? '_schema/string' : $this->get('partial'), array(
+        return App::getInstance()->theme->partial($this->getPartialTemplate(), array(
             'label'    => $this['label'],
             'name'     => $this['name'],
             'value'    => htmlentities($value),
@@ -18,7 +18,7 @@ class String extends NormString
 
     public function formatReadonly($value, $entry = null)
     {
-        return App::getInstance()->theme->partial((is_null($this->get('partial'))) ? '_schema/string' : $this->get('partial'), array(
+        return App::getInstance()->theme->partial($this->getPartialTemplate(), array(
             'label'    => $this['label'],
             'name'     => $this['name'],
             'value'    => htmlentities($value),
@@ -32,5 +32,16 @@ class String extends NormString
         return ($plain) ? $plain : '<label>'.
             $this['label'] . (($this['filter-required']) ? ' <span class="mandatory-marker">*<span> ' : '').
         '</label>';
+    }
+
+    protected function getPartialTemplate()
+    {
+        $partialTemplate = '_schema/password';
+
+        if($this->get('partialTemplate')) {
+            $partialTemplate = $this->get('partialTemplate');
+        }
+
+        return $partialTemplate;
     }
 }

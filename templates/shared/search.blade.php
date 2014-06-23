@@ -4,9 +4,6 @@
     <div class="reader">
         <div class="large-12 columns">
             <h1>{{ f('controller.name') }} list</h1>
-            <div class="hide-for-large-only">
-                <a href="{{ f('controller.url', '/null/create') }}" class="button tiny radius margin-bottom-5">Create</a>
-            </div>
             <div class="table-wrapper">
                 <a href="{{ f('controller.url', '/null/create') }}" class="button tiny radius create">Create New</a>
                 <table class="nowrap search">

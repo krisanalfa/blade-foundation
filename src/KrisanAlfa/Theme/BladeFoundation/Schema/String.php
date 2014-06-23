@@ -36,7 +36,7 @@ class String extends NormString
 
     protected function getPartialTemplate()
     {
-        $partialTemplate = '_schema/password';
+        $partialTemplate = '_schema/string';
 
         if($this->get('partialTemplate')) {
             $partialTemplate = $this->get('partialTemplate');

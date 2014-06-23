@@ -10,16 +10,18 @@
                     <li class="current"><a href="{{ URL::current() }}">Update</a></li>
                 </ul>
                 <fieldset>
-                    <legend>{{ f('controller.name') }}: {{ reset($schema)->formatPlain($entry[reset($schema)->get('name')]) }}</legend>
-                    @foreach ($schema as $key => $value)
-                        <div class="row">
-                            <div class="large-2 columns">
-                                {{ $schema[$key]->label() }}
+                    <legend>{{ f('controller.name') }}</legend>
+                    @foreach ($schema as $name => $field)
+                        @if(! $field['hidden'])
+                            <div class="row">
+                                <div class="large-2 columns">
+                                    {{ $field->label() }}
+                                </div>
+                                <div class="large-10 columns">
+                                    {{ $field->formatInput($entry[$name], $entry) }}
+                                </div>
                             </div>
-                            <div class="large-10 columns">
-                                {{ $schema[$key]->formatInput($entry[$key], $entry) }}
-                            </div>
-                        </div>
+                        @endif
                     @endforeach
                     <div class="row">
                         <div class="large-12 columns">

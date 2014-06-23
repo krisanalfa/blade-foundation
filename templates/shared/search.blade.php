@@ -1,5 +1,5 @@
 @section('content')
-<?php $schema = Norm::factory(f('controller.name'))->schema(); $first = true;?>
+<?php $schema = Norm::factory(f('controller.name'))->schema();?>
 <div class="row-fluid container">
     <div class="reader">
         <div class="large-12 columns">
@@ -12,9 +12,9 @@
                 <table class="nowrap search">
                      <thead>
                          <tr>
-                             @foreach ($schema as $key => $value)
-                                 @if(! $value->get('hidden'))
-                                     <th>{{ $value['label'] }}</th>
+                             @foreach ($schema as $key => $field)
+                                 @if(! $field['hidden'])
+                                     <th>{{ $field['label'] }}</th>
                                  @endif
                              @endforeach
                          </tr>
@@ -22,17 +22,18 @@
                      <tbody>
                          @foreach ($entries as $entry)
                              <tr>
-                                 @foreach ($schema as $key => $value)
-                                    <td>
-                                         @if($first)
-                                             <a href="{{ f('controller.url', '/'.$entry['$id']) }}">
-                                                 {{ $value->format('plain', $entry[$key], $entry) }}
-                                             </a>
-                                             <?php $first = false; ?>
-                                         @else
-                                             {{ $value->format('plain', $entry[$key], $entry) }}
-                                         @endif
-                                    </td>
+                                 @foreach ($schema as $name => $field)
+                                    @if(! $field['hidden'])
+                                        <td>
+                                             @if(reset($schema) === $field)
+                                                 <a href="{{ f('controller.url', '/'.$entry['$id']) }}">
+                                                     {{ $field->format('plain', $entry[$name], $entry) }}
+                                                 </a>
+                                             @else
+                                                 {{ $field->format('plain', $entry[$name], $entry) }}
+                                             @endif
+                                        </td>
+                                    @endif
                                  @endforeach
                              </tr>
                          @endforeach

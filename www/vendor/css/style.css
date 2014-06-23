@@ -43,10 +43,7 @@ input[type="search"],
 input[type="tel"],
 input[type="time"],
 input[type="url"],
-textarea {
-    border: none;
-    border-bottom: 1px solid #cccccc;
-    box-shadow: none; }
+textarea { border: none; border-bottom: 1px solid #cccccc; box-shadow: none; }
 
 input[type="text"]:focus,
 input[type="password"]:focus,
@@ -61,7 +58,4 @@ input[type="search"]:focus,
 input[type="tel"]:focus,
 input[type="time"]:focus,
 input[type="url"]:focus,
-textarea:focus {
-    box-shadow: none;
-    background-color: white;
-    border-bottom: 1px solid #cccccc; }
+textarea:focus { box-shadow: none; background-color: white; border-bottom: 1px solid #cccccc; }

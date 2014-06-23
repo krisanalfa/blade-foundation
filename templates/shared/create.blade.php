@@ -10,15 +10,17 @@
                 </ul>
                 <fieldset>
                     <legend>{{ f('controller.name') }}: create</legend>
-                    @foreach (Norm::factory(f('controller.name'))->schema() as $key => $value)
-                        <div class="row">
-                            <div class="large-2 columns">
-                                {{ $value->label() }}
+                    @foreach (Norm::factory(f('controller.name'))->schema() as $name => $field)
+                        @if(! $field['hidden'])
+                            <div class="row">
+                                <div class="large-2 columns">
+                                    {{ $field->label() }}
+                                </div>
+                                <div class="large-10 columns">
+                                    {{ $field->format('input', null) }}
+                                </div>
                             </div>
-                            <div class="large-10 columns">
-                                {{ $value->format('input', null) }}
-                            </div>
-                        </div>
+                        @endif
                     @endforeach
 
                     <div class="row">

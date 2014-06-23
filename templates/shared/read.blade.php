@@ -10,16 +10,18 @@
                     <li class="current"><a href="{{ URL::current() }}">Read</a></li>
                 </ul>
                 <fieldset>
-                    <legend>{{ f('controller.name') }}: {{ reset($schema)->format('plain', $entry[reset($schema)->get('name')]) }}</legend>
-                    @foreach ($schema as $key => $value)
-                        <div class="row">
-                            <div class="large-2 columns">
-                                {{ $value->label() }}
+                    <legend>{{ f('controller.name') }}</legend>
+                    @foreach ($schema as $name => $field)
+                        @if(! $field['hidden'])
+                            <div class="row">
+                                <div class="large-2 columns">
+                                    {{ $field->label() }}
+                                </div>
+                                <div class="large-10 columns">
+                                    {{ $field->formatReadonly($entry[$name], $entry) }}
+                                </div>
                             </div>
-                            <div class="large-10 columns">
-                                {{ $value->formatReadonly($entry[$key], $entry) }}
-                            </div>
-                        </div>
+                        @endif
                     @endforeach
                 </fieldset>
                 <div class="right">

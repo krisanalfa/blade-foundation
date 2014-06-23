@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>@yield('title', 'Bono')</title>
+    <title>
+        @yield('title', (f('controller.name') . f('controller.method') ? f('controller.name') . ' ' . f('controller.method', true) : 'Bono'))
+    </title>
 
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,14 +34,11 @@
     <script type="text/javascript" charset="utf-8" src="{{ Theme::base('vendor/js/jquery.js') }}"></script>
     <script type="text/javascript" charset="utf-8" src="{{ Theme::base('vendor/js/fastclick.js') }}"></script>
     <script type="text/javascript" charset="utf-8" src="{{ Theme::base('vendor/js/foundation.js') }}"></script>
+    <script type="text/javascript" charset="utf-8" src="{{ Theme::base('vendor/js/plugins.js') }}"></script>
     <script type="text/javascript" charset="utf-8">
     $(function(){
         var URL_SITE = window.URL_SITE = '{{ URL::site() }}',
             URL_BASE = window.URL_BASE = '{{ URL::base() }}';
-
-        FastClick.attach(document.body);
-
-        $(document).foundation();
     });
     </script>
 

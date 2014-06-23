@@ -7,20 +7,23 @@ class String extends NormString
 {
     public function formatInput($value, $entry = null)
     {
-        return App::getInstance()->theme->partial('_schema/string', array(
-            'label' => $this['label'],
-            'name' => $this['name'],
-            'value' => htmlentities($value),
+        return App::getInstance()->theme->partial((is_null($this->get('partial'))) ? '_schema/string' : $this->get('partial'), array(
+            'label'    => $this['label'],
+            'name'     => $this['name'],
+            'value'    => htmlentities($value),
+            'readonly' => false,
+            'entry'    => $entry,
         ));
     }
 
     public function formatReadonly($value, $entry = null)
     {
-        return App::getInstance()->theme->partial('_schema/string', array(
-            'label' => $this['label'],
-            'name' => $this['name'],
-            'value' => htmlentities($value),
-            'readonly' => true
+        return App::getInstance()->theme->partial((is_null($this->get('partial'))) ? '_schema/string' : $this->get('partial'), array(
+            'label'    => $this['label'],
+            'name'     => $this['name'],
+            'value'    => htmlentities($value),
+            'readonly' => true,
+            'entry'    => $entry,
         ));
     }
 

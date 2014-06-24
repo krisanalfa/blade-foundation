@@ -15,7 +15,7 @@ class NotificationMiddleware extends Middleware
 
         $messages = $this->query($options);
 
-        if (!empty($messages)) {
+        if (! empty($messages)) {
             return App::getInstance()->theme->partial('components/alert', array(
                 'options' => $options,
                 'messages' => $messages,

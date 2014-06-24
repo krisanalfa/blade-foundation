@@ -3,7 +3,6 @@
     "description": "Blade Theme Based on Zurb Foundation",
     "license": "MIT",
     "require": {
-        "krisanalfa/bono-blade": "dev-master",
         "krisanalfa/blade-theme": "dev-master"
     },
     "authors": [

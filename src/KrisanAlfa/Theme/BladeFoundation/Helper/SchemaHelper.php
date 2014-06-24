@@ -1,15 +1,29 @@
 <?php namespace KrisanAlfa\Theme\BladeFoundation\Helper;
 
-use Norm\Cursor;
-
 class SchemaHelper
 {
-    public static function getReferenceValue($entry, $schema)
+    public static function getReferenceValue($entry, $self)
     {
-        if ($entry instanceof Cursor) {
-            $entry = $entry->toArray();
+        if (is_string($entry)) {
+            $entryValue = $key;
+        } else {
+            $entryValue = $entry[$self['foreignKey']];
         }
 
-        return ($entry[$self->get('foreignKey')]) ?: $entry['$id'];
+        return $entryValue;
+    }
+
+    public static function getLabel($entry, $self)
+    {
+        if (is_string($entry)) {
+            $label = $entry;
+        } elseif (is_callable($self['foreignLabel'])) {
+            $getLabel = $self['foreignLabel'];
+            $label = $getLabel($entry);
+        } else {
+            $label = $entry[$self['foreignLabel']];
+        }
+
+        return $label;
     }
 }

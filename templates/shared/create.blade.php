@@ -17,7 +17,7 @@
                                     {{ $field->label() }}
                                 </div>
                                 <div class="large-10 columns">
-                                    {{ $field->format('input', null) }}
+                                    {{ $field->formatInput(@$entry[$name], $entry) }}
                                 </div>
                             </div>
                         @endif
@@ -26,8 +26,8 @@
                     <div class="row">
                         <div class="large-12 columns">
                             <div class="right">
-                                <a href="{{ f('controller.url') }}" class="button tiny radius secondary">Cancel</a>
-                                <button type="submit" class="radius tiny">Create</button>
+                                <a href="{{ f('controller.url') }}" class="button radius secondary">Cancel</a>
+                                <button type="submit" class="radius">Create</button>
                             </div>
                         </div>
                     </div>

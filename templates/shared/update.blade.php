@@ -24,9 +24,9 @@
                     <div class="row">
                         <div class="large-12 columns">
                             <div class="right">
-                                <a href="{{ f('controller.url', '/'.$entry['$id']) }}" class="button radius tiny secondary">Cancel</a>
-                                <button type="submit" class="radius tiny">Submit</button>
-                                <a href="{{ f('controller.url', '/'.$entry['$id'].'/delete') }}" class="button tiny radius alert">Delete</a>
+                                <a href="{{ f('controller.url', '/'.$entry['$id']) }}" class="button radius secondary">Cancel</a>
+                                <button type="submit" class="radius">Submit</button>
+                                <a href="{{ f('controller.url', '/'.$entry['$id'].'/delete') }}" class="button radius alert">Delete</a>
                             </div>
                         </div>
                     </div>

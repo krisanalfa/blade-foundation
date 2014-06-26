@@ -14,6 +14,7 @@
 
     <link rel="stylesheet" href="{{ Theme::base('vendor/css/normalize.css') }}">
     <link rel="stylesheet" href="{{ Theme::base('vendor/css/foundation.css') }}">
+    <link rel="stylesheet" href="{{ Theme::base('vendor/css/font-awesome.css') }}">
     <link rel="stylesheet" href="{{ Theme::base('vendor/css/style.css') }}">
 
     <script type="text/javascript" charset="utf-8" src="{{ Theme::base('vendor/js/modernizr.js') }}"></script>

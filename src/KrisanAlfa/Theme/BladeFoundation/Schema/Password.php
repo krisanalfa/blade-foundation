@@ -29,7 +29,7 @@ class Password extends NormPassword
 
     public function label($plain = false)
     {
-        return ($plain) ? $plain : '<label>'.
+        return ($plain) ? $this['label'] : '<label>'.
             $this['label'] . (($this['filter-required']) ? ' <span class="mandatory-marker">*<span> ' : '').
         '</label>';
     }

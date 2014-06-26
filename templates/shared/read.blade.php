@@ -25,8 +25,8 @@
                     @endforeach
                 </fieldset>
                 <div class="right">
-                    <a href="{{ f('controller.url', '/'.$entry['$id'].'/update') }}" class="button tiny radius">Update</a>
-                    <a href="{{ f('controller.url', '/'.$entry['$id'].'/delete') }}" class="button tiny radius alert">Delete</a>
+                    <a href="{{ f('controller.url', '/'.$entry['$id'].'/update') }}" class="button radius">Update</a>
+                    <a href="{{ f('controller.url', '/'.$entry['$id'].'/delete') }}" class="button radius alert">Delete</a>
                 </div>
             </form>
         </div>

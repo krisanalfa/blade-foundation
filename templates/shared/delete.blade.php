@@ -12,8 +12,8 @@
                     <legend>{{ 'Delete '.f('controller.name').' ('.count($ids).' entries)' }}</legend>
                         <input type="hidden" name="confirm" value="1">
                         <p>Are you sure want to delete {{ count($ids).' entries' }}?</p>
-                        <a href="{{ dirname(URL::current()) }}" class="button radius tiny">Cancel</a>
-                        <input class="button radius alert tiny" type="submit" value="Delete forever">
+                        <a href="{{ dirname(URL::current()) }}" class="button radius">Cancel</a>
+                        <input class="button radius alert" type="submit" value="Delete forever">
                 </fieldset>
             </form>
         </div>

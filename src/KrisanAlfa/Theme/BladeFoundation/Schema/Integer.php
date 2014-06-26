@@ -1,9 +1,9 @@
 <?php namespace KrisanAlfa\Theme\BladeFoundation\Schema;
 
 use Bono\App;
-use Norm\Schema\String as NormString;
+use Norm\Schema\Integer as NormInteger;
 
-class String extends NormString
+class Integer extends NormInteger
 {
     public function formatInput($value, $entry = null)
     {
@@ -36,7 +36,7 @@ class String extends NormString
 
     protected function getPartialTemplate()
     {
-        $partialTemplate = '_schema/string';
+        $partialTemplate = '_schema/integer';
 
         if($this->get('partialTemplate')) {
             $partialTemplate = $this->get('partialTemplate');

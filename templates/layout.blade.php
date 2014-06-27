@@ -10,14 +10,14 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 
-    <link type="image/x-icon" href="{{ Theme::base('vendor/img/favicon.ico') }}" rel="Shortcut icon" />
+    <link type="image/x-icon" href="{{ Theme::base('vendor/blade-foundation/img/favicon.ico') }}" rel="Shortcut icon" />
 
-    <link rel="stylesheet" href="{{ Theme::base('vendor/css/normalize.css') }}">
-    <link rel="stylesheet" href="{{ Theme::base('vendor/css/foundation.css') }}">
-    <link rel="stylesheet" href="{{ Theme::base('vendor/css/font-awesome.css') }}">
-    <link rel="stylesheet" href="{{ Theme::base('vendor/css/style.css') }}">
+    <link rel="stylesheet" href="{{ Theme::base('vendor/blade-foundation/css/normalize.css') }}">
+    <link rel="stylesheet" href="{{ Theme::base('vendor/blade-foundation/css/foundation.css') }}">
+    <link rel="stylesheet" href="{{ Theme::base('vendor/blade-foundation/css/font-awesome.css') }}">
+    <link rel="stylesheet" href="{{ Theme::base('vendor/blade-foundation/css/style.css') }}">
 
-    <script type="text/javascript" charset="utf-8" src="{{ Theme::base('vendor/js/modernizr.js') }}"></script>
+    <script type="text/javascript" charset="utf-8" src="{{ Theme::base('vendor/blade-foundation/js/modernizr.js') }}"></script>
 
     <!-- PAGE LEVEL STYLING -->
     @yield('styler')
@@ -32,10 +32,10 @@
     <!-- PAGE CONTENT -->
     @yield('content')
 
-    <script type="text/javascript" charset="utf-8" src="{{ Theme::base('vendor/js/jquery.js') }}"></script>
-    <script type="text/javascript" charset="utf-8" src="{{ Theme::base('vendor/js/fastclick.js') }}"></script>
-    <script type="text/javascript" charset="utf-8" src="{{ Theme::base('vendor/js/foundation.js') }}"></script>
-    <script type="text/javascript" charset="utf-8" src="{{ Theme::base('vendor/js/plugins.js') }}"></script>
+    <script type="text/javascript" charset="utf-8" src="{{ Theme::base('vendor/blade-foundation/js/jquery.js') }}"></script>
+    <script type="text/javascript" charset="utf-8" src="{{ Theme::base('vendor/blade-foundation/js/fastclick.js') }}"></script>
+    <script type="text/javascript" charset="utf-8" src="{{ Theme::base('vendor/blade-foundation/js/foundation.js') }}"></script>
+    <script type="text/javascript" charset="utf-8" src="{{ Theme::base('vendor/blade-foundation/js/plugins.js') }}"></script>
     <script type="text/javascript" charset="utf-8">
     $(function(){
         var URL_SITE = window.URL_SITE = '{{ URL::site() }}',

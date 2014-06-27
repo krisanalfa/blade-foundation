@@ -13,7 +13,7 @@
     ],
     "autoload": {
         "psr-0": {
-            "KrisanAlfa\\Theme\\BladeFoundation": "src"
+            "KrisanAlfa\\Theme\\BladeFoundation": "src",
         }
     },
     "minimum-stability": "dev"

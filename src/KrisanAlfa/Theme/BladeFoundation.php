@@ -25,6 +25,6 @@ class BladeFoundation extends BladeTheme
 
         $this->addBaseDirectory($directory, 5);
 
-        $this->resolveAssetPath('vendor');
+        $this->resolveAssetPath('vendor/blade-foundation');
     }
 }

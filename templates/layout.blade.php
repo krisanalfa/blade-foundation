@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>
-        @yield('title', (f('controller.name') . f('controller.method') ? f('controller.name') . ' ' . f('controller.method', true) : 'Bono'))
+        @yield('title', (f('controller.name') . f('controller.method') ? f('controller.name') . ' ' . f('controller.method', true) : 'Semester Pendek'))
     </title>
 
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
@@ -15,9 +15,12 @@
     <link rel="stylesheet" href="{{ Theme::base('vendor/blade-foundation/css/normalize.css') }}">
     <link rel="stylesheet" href="{{ Theme::base('vendor/blade-foundation/css/foundation.css') }}">
     <link rel="stylesheet" href="{{ Theme::base('vendor/blade-foundation/css/font-awesome.css') }}">
+    <link rel="stylesheet" href="{{ Theme::base('vendor/blade-foundation/css/main.css') }}">
     <link rel="stylesheet" href="{{ Theme::base('vendor/blade-foundation/css/style.css') }}">
 
     <script type="text/javascript" charset="utf-8" src="{{ Theme::base('vendor/blade-foundation/js/modernizr.js') }}"></script>
+    <script type="text/javascript" charset="utf-8" src="{{ Theme::base('vendor/blade-foundation/js/jquery.js') }}"></script>
+    <script type="text/javascript" charset="utf-8" src="{{ Theme::base('vendor/blade-foundation/js/modernizr.foundation.js') }}"></script>
 
     <!-- PAGE LEVEL STYLING -->
     @yield('styler')
@@ -29,12 +32,11 @@
     <!-- NAVBAR -->
     @include('components.navbar')
 
+
     <!-- PAGE CONTENT -->
     @yield('content')
-
-    <script type="text/javascript" charset="utf-8" src="{{ Theme::base('vendor/blade-foundation/js/jquery.js') }}"></script>
     <script type="text/javascript" charset="utf-8" src="{{ Theme::base('vendor/blade-foundation/js/fastclick.js') }}"></script>
-    <script type="text/javascript" charset="utf-8" src="{{ Theme::base('vendor/blade-foundation/js/foundation.js') }}"></script>
+    <script type="text/javascript" charset="utf-8" src="{{ Theme::base('vendor/blade-foundation/js/foundation.min.js') }}"></script>
     <script type="text/javascript" charset="utf-8" src="{{ Theme::base('vendor/blade-foundation/js/plugins.js') }}"></script>
     <script type="text/javascript" charset="utf-8">
     $(function(){

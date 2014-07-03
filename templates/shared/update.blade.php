@@ -2,7 +2,7 @@
 <?php $schema = Norm::factory(f('controller.name'))->schema(); ?>
 <div class="row-fluid container">
     <div class="reader">
-        <div class="large-12 columns">
+        <div class="twelve columns">
             <form method="POST">
                 <ul class="breadcrumbs">
                     <li><a href="{{ URL::base() }}">Home</a></li>
@@ -13,19 +13,19 @@
                     <legend>{{ f('controller.name') }}</legend>
                     @foreach ($schema as $name => $field)
                         <div class="row">
-                            <div class="large-2 columns">
+                            <div class="three columns">
                                 {{ $field->label() }}
                             </div>
-                            <div class="large-10 columns">
+                            <div class="nine columns">
                                 {{ $field->formatInput($entry[$name], $entry) }}
                             </div>
                         </div>
                     @endforeach
                     <div class="row">
-                        <div class="large-12 columns">
+                        <div class="twelve columns">
                             <div class="right">
                                 <a href="{{ f('controller.url', '/'.$entry['$id']) }}" class="button radius secondary">Cancel</a>
-                                <button type="submit" class="radius">Submit</button>
+                                <button type="submit" class="button radius">Submit</button>
                                 <a href="{{ f('controller.url', '/'.$entry['$id'].'/delete') }}" class="button radius alert">Delete</a>
                             </div>
                         </div>

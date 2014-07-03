@@ -1,10 +1,10 @@
 <?php namespace KrisanAlfa\Theme\BladeFoundation\Schema;
 
-use Norm\Schema\Reference;
+use Norm\Schema\Reference as NormReference;
 use Norm\Norm;
 use Bono\App;
 
-class SysParamReference extends Reference
+class SysParamReference extends NormReference
 {
     public function by($group, $sysParamSchemaName = 'Sysparam', $keyWord = 'key', $value = 'value')
     {
@@ -19,7 +19,7 @@ class SysParamReference extends Reference
     public function toJSON($value)
     {
         $foreign  = Norm::factory($this->get('foreign'));
-        $criteria = array('groups' => $this->get('foreignGroup'), $this->get('foreignKey') => $value);
+        $criteria = array('group' => $this->get('foreignGroup'), $this->get('foreignKey') => $value);
         $entry    = $foreign->findOne($criteria);
 
         return (is_null($entry)) ? null : $entry->get($this->get('foreignLabel'));
@@ -34,14 +34,14 @@ class SysParamReference extends Reference
         $foreign = Norm::factory($this['foreign']);
 
         if ($this['readonly']) {
-            $criteria = array('groups' => $this->get('foreignGroup'), $this->get('foreignKey') => $value);
+            $criteria = array('group' => $this->get('foreignGroup'), $this->get('foreignKey') => $value);
             $entry    = $foreign->findOne($criteria);
             $label    = (is_null($entry)) ? null : $entry->get($this->get('foreignLabel'));
 
             return '<span class="field">'.$label.'</span>';
         }
 
-        $entries = $foreign->find(array('groups' => $this->get('foreignGroup')));
+        $entries = $foreign->find(array('group' => $this->get('foreignGroup')));
 
         return App::getInstance()->theme->partial('_schema.sysparam', array(
             'self'    => $this,

@@ -1,5 +1,5 @@
 /*Font*/
-body { font-family: "Lato", "Helvetica Neue", "Arial", serif, sans-serif; }
+body, p { font-family: "Lato", "Helvetica Neue", "Arial", serif, sans-serif; }
 .top-bar { font-family: "Lato", "Helvetica Neue", "Arial", serif, sans-serif; }
 .top-bar-section ul li a { font-family: "Lato", "Helvetica Neue", "Arial", serif, sans-serif; }
 h1, h2, h3, h4, h5, h6 { font-family: "Lato", "Helvetica Neue", "Arial", serif, sans-serif; }
@@ -8,54 +8,24 @@ button[type=submit] { font-family: "Lato", "Helvetica Neue", "Arial", serif, san
 
 /*Container*/
 .container { padding: 20px; }
-.reader { padding-top: 30px; }
+.reader { padding-top: 70px; }
+.bottom50 { padding-bottom: 50px ; }
 .action-container { padding-top: 45px; }
 .action-container .button { margin: 5px; }
 
 /*Form*/
 form fieldset button[type=submit] { margin-top: 10px; }
 form fieldset .row .large-2 label { margin-top: 10px; }
-span.mandatory-marker { color: red; }
+.mandatory-marker { color: red; }
 fieldset { border-radius: 3px; }
 
 /*Helper*/
 .margin-bottom-5 { margin-bottom: 5px; }
 
 /*Button*/
-.table-wrapper a.create { margin-bottom: 0; border-radius: 3px 3px 0 0; }
+.table-wrapper .create { margin-bottom: 0; border-radius: 3px 3px 0 0; }
 
 /*Responsive Table*/
-.table-wrapper table.search { margin-bottom: 0; min-width:  100%; }
+.table-wrapper .search { margin-bottom: 0; min-width:  100%; }
 .nowrap thead tr th, .nowrap tbody tr td { white-space: nowrap; }
 .table-wrapper { overflow: auto; -webkit-overflow-scrolling: touch; }
-
-/*Input*/
-input[type="text"],
-input[type="password"],
-input[type="date"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="month"],
-input[type="week"],
-input[type="email"],
-input[type="number"],
-input[type="search"],
-input[type="tel"],
-input[type="time"],
-input[type="url"],
-textarea { border: none; border-bottom: 1px solid #cccccc; box-shadow: none; }
-
-input[type="text"]:focus,
-input[type="password"]:focus,
-input[type="date"]:focus,
-input[type="datetime"]:focus,
-input[type="datetime-local"]:focus,
-input[type="month"]:focus,
-input[type="week"]:focus,
-input[type="email"]:focus,
-input[type="number"]:focus,
-input[type="search"]:focus,
-input[type="tel"]:focus,
-input[type="time"]:focus,
-input[type="url"]:focus,
-textarea:focus { box-shadow: none; background-color: white; border-bottom: 1px solid #cccccc; }

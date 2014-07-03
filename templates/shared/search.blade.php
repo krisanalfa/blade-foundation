@@ -1,9 +1,9 @@
 @section('content')
 <?php $schema = Norm::factory(f('controller.name'))->schema();?>
 <div class="row-fluid container">
-    <div class="reader">
-        <div class="large-12 columns">
-            <h1>{{ f('controller.name') }} list</h1>
+    <div class="twelve columns">
+        <div class="bottom50">
+            <h1>Daftar {{ f('controller.name') }}</h1>
             <div class="table-wrapper">
                 <a href="{{ f('controller.url', '/null/create') }}" class="button radius create">Create New</a>
                 <table class="nowrap search">

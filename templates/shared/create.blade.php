@@ -1,7 +1,7 @@
 @section('content')
 <div class="row-fluid container">
     <div class="reader">
-        <div class="large-12 columns">
+        <div class="twelve columns">
             <form method="POST">
                 <ul class="breadcrumbs">
                     <li><a href="{{ URL::base() }}">Home</a></li>
@@ -9,25 +9,25 @@
                     <li class="current"><a href="{{ URL::current() }}">Create</a></li>
                 </ul>
                 <fieldset>
-                    <legend>{{ f('controller.name') }}: create</legend>
+                    <legend>{{ f('controller.name') }}</legend>
                     @foreach (Norm::factory(f('controller.name'))->schema() as $name => $field)
-                        @if(! $field['hidden'])
+                        @unless($field['generated'])
                             <div class="row">
-                                <div class="large-2 columns">
+                                <div class="three columns">
                                     {{ $field->label() }}
                                 </div>
-                                <div class="large-10 columns">
+                                <div class="nine columns">
                                     {{ $field->formatInput(@$entry[$name], $entry) }}
                                 </div>
                             </div>
-                        @endif
+                        @endunless
                     @endforeach
 
                     <div class="row">
-                        <div class="large-12 columns">
+                        <div class="twelve columns">
                             <div class="right">
-                                <a href="{{ f('controller.url') }}" class="button radius secondary">Cancel</a>
-                                <button type="submit" class="radius">Create</button>
+                                <a href="{{ f('controller.url') }}" class="button secondary">Cancel</a>
+                                <button type="submit" class="radius button">Create</button>
                             </div>
                         </div>
                     </div>

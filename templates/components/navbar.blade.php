@@ -1,5 +1,5 @@
 <nav>
-     <div class="twelve columns header_nav">
+     <div class="twelve columns header-nav">
         <div class="navigation">
             <ul id="menu-header" class="nav-bar horizontal">
                 <li>

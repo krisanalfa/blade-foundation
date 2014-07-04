@@ -1,7 +1,7 @@
 @section('content')
 <article class="row container">
-    <div class="home">
-        <h2>Hello Friend!</h2>
+    <div class="welcome">
+        <h2 class="title">Hello Friend!</h2>
         <p>
             You see me because you haven't overriden templates yet or default routes. May be
             this is your fist journey through the world of Bono. I wish you will enjoy

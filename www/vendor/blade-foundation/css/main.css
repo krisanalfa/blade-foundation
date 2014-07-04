@@ -4,72 +4,30 @@
     font-family: 'Lato';
     font-style: normal;
     font-weight: 400;
-    src: local('Lato Regular'), local('Lato-Regular'), url(../fonts/qIIYRU-oROkIk8vfvxw6QvesZW2xOQ-xsNqO47m55DA.woff) format('woff');
+    src: local('Lato Regular'), local('Lato-Regular'), url(../fonts/Lato-Regular.woff) format('woff');
 }
 
 @font-face {
     font-family: 'Open Sans Condensed';
     font-style: normal;
     font-weight: 300;
-    src: local('Open Sans Cond Light'), local('OpenSans-CondensedLight'), url(../fonts/gk5FxslNkTTHtojXrkp-xGAzD5WKQVN4wSyA0MYYi4rr7w4p9aSvGirXi6XmeXNA.woff) format('woff');
-}
-
-@font-face {
-    font-family: 'Playfair Display';
-    font-style: italic;
-    font-weight: 400;
-    src: local('Playfair Display Italic'), local('PlayfairDisplay-Italic'), url(../fonts/9MkijrV-dEJ0-_NWV7E6N9QroGjXLbbdFByKqKsSrKI.woff) format('woff');
+    src: local('Open Sans Cond Light'), local('OpenSans-CondensedLight'), url(../fonts/OpenSans-CondensedLight.woff) format('woff');
 }
 
 body {
     background: #fafafa;
-    font-family: "Lato", "Helvetica Neue", "Arial", serif, sans-serif;
+    font-family: 'Lato', 'Helvetica Neue', 'Arial', serif, sans-serif;
 }
 
 .title {
     font-family: 'Open Sans Condensed';
 }
 
-.row {
-    width: 960px;
-}
-
-hr {
-    -moz-border-bottom-colors: none;
-    -moz-border-left-colors: none;
-    -moz-border-right-colors: none;
-    -moz-border-top-colors: none;
-    border-color: #999;
-    border-image: none;
-    border-style: dotted;
-    border-width: 1px 0 0;
-    clear: both;
-    height: 0;
-    margin: 22px 0 21px;
-}
-
-.page_wrap {
-    margin: 0 auto 25px;
-}
-
-header {
-    background: #f3f3f3;
-    clear: both;
-    padding: 20px 0 40px;
-}
-
-.header_nav {
+.header-nav {
     background: #fafafa;
     padding: 15px 0 0;
     box-shadow: 0 1px 6px rgba(34, 25, 25, 0.6);
     z-index: 999;
-}
-
-.header_nav_fullwidth {
-    background: #fafafa;
-    padding: 10px 0 2px;
-    margin-bottom: 25px;
-    box-shadow: 0 1px 3px rgba(34, 25, 25, 0.4);
 }
 
 .nav-bar {

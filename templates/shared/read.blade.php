@@ -1,7 +1,7 @@
 @section('content')
 <?php $schema = Norm::factory(f('controller.name'))->schema(); ?>
-<div class="row-fluid container">
-    <div class="reader">
+<div class="row container">
+    <div class="top30">
         <div class="twelve columns">
             <form>
                 <ul class="breadcrumbs">
@@ -12,7 +12,7 @@
                 <fieldset>
                     <legend>{{ f('controller.name') }}</legend>
                     @foreach ($schema as $name => $field)
-                        @if($field['hidden'] !== true)
+                        @unless($field['hidden'])
                             <div class="row">
                                 <div class="three columns">
                                     {{ $field->label() }}
@@ -21,11 +21,14 @@
                                     {{ $field->formatReadonly($entry[$name], $entry) }}
                                 </div>
                             </div>
-                        @endif
+                        @endunless
                     @endforeach
-                    <div class="right">
-                        <a href="{{ f('controller.url', '/'.$entry['$id'].'/update') }}" class="button radius">Update</a>
-                        <a href="{{ f('controller.url', '/'.$entry['$id'].'/delete') }}" class="button radius alert">Delete</a>
+
+                    <div class="row top30">
+                        <div class="right">
+                            <a href="{{ f('controller.url', '/'.$entry['$id'].'/update') }}" class="button radius">Update</a>
+                            <a href="{{ f('controller.url', '/'.$entry['$id'].'/delete') }}" class="button radius alert">Delete</a>
+                        </div>
                     </div>
                 </fieldset>
             </form>

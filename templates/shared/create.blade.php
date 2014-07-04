@@ -1,6 +1,6 @@
 @section('content')
-<div class="row-fluid container">
-    <div class="reader">
+<div class="row container">
+    <div class="top30">
         <div class="twelve columns">
             <form method="POST">
                 <ul class="breadcrumbs">
@@ -23,12 +23,10 @@
                         @endunless
                     @endforeach
 
-                    <div class="row">
-                        <div class="twelve columns">
-                            <div class="right">
-                                <a href="{{ f('controller.url') }}" class="button secondary">Cancel</a>
-                                <button type="submit" class="radius button">Create</button>
-                            </div>
+                    <div class="row top30">
+                        <div class="right">
+                            <a href="{{ f('controller.url') }}" class="button secondary">Cancel</a>
+                            <button type="submit" class="radius button">Create</button>
                         </div>
                     </div>
                 </fieldset>

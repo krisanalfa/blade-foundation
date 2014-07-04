@@ -1,6 +1,6 @@
 @section('content')
-<article class="row-fluid container">
-    <div class="home reader">
+<article class="row container">
+    <div class="home">
         <h2>Hello Friend!</h2>
         <p>
             You see me because you haven't overriden templates yet or default routes. May be

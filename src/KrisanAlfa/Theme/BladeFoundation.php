@@ -1,9 +1,5 @@
 <?php namespace KrisanAlfa\Theme;
 
-use Bono\App;
-use KrisanAlfa\Theme\BladeTheme;
-use RuntimeException;
-
 /**
  * A Blade Theme for Bono Theme
  *

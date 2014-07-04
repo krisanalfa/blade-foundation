@@ -1,13 +1,13 @@
 <nav>
      <div class="twelve columns header_nav">
-        <!-- <h1>
-            <a href="{{ URL::site() }}">
-                <span class="logo"></span>
-                <span class="brand-logo">{{ App::getInstance()->config('navbar.title') }}</span>
-            </a>
-        </h1> -->
         <div class="navigation">
             <ul id="menu-header" class="nav-bar horizontal">
+                <li>
+                    <a href="{{ URL::site() }}" class="nav-title">
+                        <span class="logo"></span>
+                        <span class="brand-logo">{{ App::getInstance()->config('navbar.title') }}</span>
+                    </a>
+                </li>
                 @foreach(App::getInstance()->config('navbar.menus') as $title => $uri)
                     @if(! isset($uri['children']))
                         <li>

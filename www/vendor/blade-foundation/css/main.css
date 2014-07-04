@@ -13,9 +13,23 @@
 
 @font-face {
     font-family: 'Lato';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Lato Regular'), local('Lato-Regular'), url(../fonts/qIIYRU-oROkIk8vfvxw6QvesZW2xOQ-xsNqO47m55DA.woff) format('woff');
+    font-style: normal;
+    font-weight: 400;
+    src: local('Lato Regular'), local('Lato-Regular'), url(../fonts/qIIYRU-oROkIk8vfvxw6QvesZW2xOQ-xsNqO47m55DA.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'Open Sans Condensed';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Open Sans Cond Light'), local('OpenSans-CondensedLight'), url(../fonts/gk5FxslNkTTHtojXrkp-xGAzD5WKQVN4wSyA0MYYi4rr7w4p9aSvGirXi6XmeXNA.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    font-style: italic;
+    font-weight: 400;
+    src: local('Playfair Display Italic'), local('PlayfairDisplay-Italic'), url(../fonts/9MkijrV-dEJ0-_NWV7E6N9QroGjXLbbdFByKqKsSrKI.woff) format('woff');
 }
 
 .lsf {
@@ -59,22 +73,9 @@
     font-feature-settings: "liga" 1, "dlig" 1;
 }
 
-@font-face {
-    font-family: 'Open Sans Condensed';
-  font-style: normal;
-  font-weight: 300;
-  src: local('Open Sans Cond Light'), local('OpenSans-CondensedLight'), url(../fonts/gk5FxslNkTTHtojXrkp-xGAzD5WKQVN4wSyA0MYYi4rr7w4p9aSvGirXi6XmeXNA.woff) format('woff');
-}
-
-@font-face {
-    font-family: 'Playfair Display';
-  font-style: italic;
-  font-weight: 400;
-  src: local('Playfair Display Italic'), local('PlayfairDisplay-Italic'), url(../fonts/9MkijrV-dEJ0-_NWV7E6N9QroGjXLbbdFByKqKsSrKI.woff) format('woff');
-}
-
 body {
     background: #fafafa;
+    font-family: "Lato", "Helvetica Neue", "Arial", serif, sans-serif;
 }
 
 .title {
@@ -962,22 +963,7 @@ select {
     background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMTJweCIgeT0iMHB4IiB3aWR0aD0iMjRweCIgaGVpZ2h0PSIzcHgiIHZpZXdCb3g9IjAgMCA2IDMiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDYgMyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBvbHlnb24gcG9pbnRzPSI1Ljk5MiwwIDIuOTkyLDMgLTAuMDA4LDAgIi8+PC9zdmc+);
     background-position: 100% 50%;
     background-repeat: no-repeat;
-    border-bottom-color: rgb(153, 153, 153);
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-    border-bottom-style: solid;
-    border-bottom-width: 1px;
-    border-left-color: rgb(153, 153, 153);
-    border-left-style: solid;
-    border-left-width: 1px;
-    border-right-color: rgb(153, 153, 153);
-    border-right-style: solid;
-    border-right-width: 1px;
-    border-top-color: rgb(153, 153, 153);
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
-    border-top-style: solid;
-    border-top-width: 1px;
+    border: 1px solid rgb(153, 153, 153);
     box-sizing: border-box;
     color: rgba(0, 0, 0, 0.74902);
     cursor: default;
@@ -986,14 +972,8 @@ select {
     font-weight: normal;
     height: 32px;
     line-height: normal;
-    margin-bottom: 14.222240447998047px;
-    margin-left: 0px;
-    margin-right: 0px;
-    margin-top: 0px;
-    padding-bottom: 7px;
-    padding-left: 7px;
-    padding-right: 7px;
-    padding-top: 7px;
+    margin-bottom: 15px;
+    padding: 6px;
     width: 100%;
 }
 
@@ -1007,7 +987,7 @@ fieldset {
 }
 
 .navigation {
-    margin: 0 25px;
+    margin: 0 50px;
 }
 
 .three label {
@@ -1016,19 +996,97 @@ fieldset {
 
 code {
     background-color: rgb(249, 242, 244);
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
+    border-radius: 4px;
     box-sizing: border-box;
     color: rgb(199, 37, 78);
-    display: inline;
     font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
     font-size: 13px;
-    height: auto;
     line-height: 18px;
-    padding-bottom: 2px;
-    padding-left: 4px;
-    padding-right: 4px;
-    padding-top: 2px;
+    padding: 2px 4px;
+}
+
+/*Font*/
+p,
+h1, h2, h3, h4, h5, h6,
+span,
+.button,
+button[type=submit] {
+    font-family: "Lato", "Helvetica Neue", "Arial", serif, sans-serif;
+}
+
+/*Container*/
+.container {
+    padding: 20px;
+}
+
+.reader {
+    padding-top: 70px;
+}
+
+.bottom50 {
+    padding-bottom: 50px ;
+}
+
+.top50 {
+    margin-top: 50px;
+}
+
+.action-container {
+    padding-top: 45px;
+}
+
+.action-container .button {
+    margin: 5px;
+}
+
+/*Form*/
+form fieldset button[type=submit],
+form fieldset .row .large-2 label {
+    margin-top: 10px;
+}
+
+.mandatory-marker {
+    color: red;
+}
+
+fieldset {
+    border-radius: 3px;
+}
+
+/*Helper*/
+.margin-bottom-5 {
+    margin-bottom: 5px;
+}
+
+/*Button*/
+.table-wrapper .create {
+    margin-bottom: 0;
+    border-radius: 3px 3px 0 0;
+}
+
+/*Responsive Table*/
+.table-wrapper .search {
+    margin-bottom: 0;
+    min-width:  100%;
+}
+.nowrap thead tr th,
+.nowrap tbody tr td {
+    white-space: nowrap;
+}
+
+.table-wrapper {
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.alert-container {
+    margin-bottom: -70px;
+}
+
+div.alert-box {
+    margin-top: 20px;
+}
+
+.top30 {
+    margin-top: 30px;
 }

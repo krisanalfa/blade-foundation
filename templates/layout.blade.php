@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>
-        @yield('title', (f('controller.name') . f('controller.method') ? f('controller.name') . ' ' . f('controller.method', true) : 'Semester Pendek'))
+        @yield('title', (f('controller.name') . f('controller.method') ? f('controller.name') . ' ' . f('controller.method', true) : 'Bono'))
     </title>
 
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
@@ -20,21 +20,20 @@
 
     <script type="text/javascript" charset="utf-8" src="{{ Theme::base('vendor/blade-foundation/js/modernizr.js') }}"></script>
     <script type="text/javascript" charset="utf-8" src="{{ Theme::base('vendor/blade-foundation/js/jquery.js') }}"></script>
-    <script type="text/javascript" charset="utf-8" src="{{ Theme::base('vendor/blade-foundation/js/modernizr.foundation.js') }}"></script>
 
     <!-- PAGE LEVEL STYLING -->
     @yield('styler')
 </head>
 
 <body>
-    {{ f('notification.show') }}
-
     <!-- NAVBAR -->
-    @include('components.navbar')
 
+    @include('components.navbar')
+    {{ f('notification.show') }}
 
     <!-- PAGE CONTENT -->
     @yield('content')
+
     <script type="text/javascript" charset="utf-8" src="{{ Theme::base('vendor/blade-foundation/js/fastclick.js') }}"></script>
     <script type="text/javascript" charset="utf-8" src="{{ Theme::base('vendor/blade-foundation/js/foundation.min.js') }}"></script>
     <script type="text/javascript" charset="utf-8" src="{{ Theme::base('vendor/blade-foundation/js/plugins.js') }}"></script>

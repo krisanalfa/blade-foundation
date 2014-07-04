@@ -1,7 +1,7 @@
 @section('content')
 <?php $schema = Norm::factory(f('controller.name'))->schema(); ?>
-<div class="row-fluid container">
-    <div class="reader">
+<div class="row container">
+    <div class="top30">
         <div class="twelve columns">
             <form method="POST">
                 <ul class="breadcrumbs">
@@ -21,13 +21,12 @@
                             </div>
                         </div>
                     @endforeach
-                    <div class="row">
-                        <div class="twelve columns">
-                            <div class="right">
-                                <a href="{{ f('controller.url', '/'.$entry['$id']) }}" class="button radius secondary">Cancel</a>
-                                <button type="submit" class="button radius">Submit</button>
-                                <a href="{{ f('controller.url', '/'.$entry['$id'].'/delete') }}" class="button radius alert">Delete</a>
-                            </div>
+
+                    <div class="row top30">
+                        <div class="right">
+                            <a href="{{ f('controller.url', '/'.$entry['$id']) }}" class="button radius secondary">Cancel</a>
+                            <button type="submit" class="button radius">Submit</button>
+                            <a href="{{ f('controller.url', '/'.$entry['$id'].'/delete') }}" class="button radius alert">Delete</a>
                         </div>
                     </div>
                 </fieldset>

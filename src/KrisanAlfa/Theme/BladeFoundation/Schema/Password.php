@@ -5,6 +5,13 @@ use Norm\Schema\Password as NormPassword;
 
 class Password extends NormPassword
 {
+    public function __construct($name, $label = null)
+    {
+        parent::__construct($name, $label);
+
+        $this->set('hidden', true);
+    }
+
     public function formatInput($value, $entry = null)
     {
         return App::getInstance()->theme->partial($this->getPartialTemplate(), array(
@@ -38,7 +45,7 @@ class Password extends NormPassword
     {
         $partialTemplate = '_schema/password';
 
-        if($this->get('partialTemplate')) {
+        if ($this->get('partialTemplate')) {
             $partialTemplate = $this->get('partialTemplate');
         }
 

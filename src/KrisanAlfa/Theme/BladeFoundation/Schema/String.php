@@ -38,7 +38,7 @@ class String extends NormString
     {
         $partialTemplate = '_schema/string';
 
-        if($this->get('partialTemplate')) {
+        if ($this->get('partialTemplate')) {
             $partialTemplate = $this->get('partialTemplate');
         }
 

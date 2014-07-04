@@ -1,7 +1,5 @@
 <?php namespace KrisanAlfa\Theme\BladeFoundation\Schema;
 
-use Norm\Norm;
-use Bono\Helper\URL;
 use Bono\App;
 use Norm\Schema\DateTime;
 use Norm\Type\DateTime as TypeDateTime;
@@ -15,12 +13,12 @@ class Date extends DateTime
         '</label>';
     }
 
-    public function formatPlain($value, $entry = NULL)
+    public function formatPlain($value, $entry = null)
     {
         return $value->format('d-M-Y');
     }
 
-    public function formatReadonly($value, $entry = NULL)
+    public function formatReadonly($value, $entry = null)
     {
         return App::getInstance()->theme->partial('_schema.string', array(
             'label'    => $this['label'],
@@ -31,11 +29,11 @@ class Date extends DateTime
         ));
     }
 
-    public function formatInput($value, $entry = NULL)
+    public function formatInput($value, $entry = null)
     {
         $app = App::getInstance();
 
-        if($value instanceof TypeDateTime) {
+        if ($value instanceof TypeDateTime) {
             $value = date("d-m-Y", strtotime($value->__toString()));
         }
 

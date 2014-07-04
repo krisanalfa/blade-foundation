@@ -38,7 +38,7 @@ class Integer extends NormInteger
     {
         $partialTemplate = '_schema/integer';
 
-        if($this->get('partialTemplate')) {
+        if ($this->get('partialTemplate')) {
             $partialTemplate = $this->get('partialTemplate');
         }
 

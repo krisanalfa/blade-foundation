@@ -1,4 +1,4 @@
-<?php use KrisanAlfa\Theme\BladeFoundation\Helper\SchemaHelper; ?>
+<?php use KrisanAlfa\Theme\Helper\SchemaHelper; ?>
 <select name="{{ $self['name'] }}" data-value="{{ @$value }}">
     <option value="" disabled>&mdash; Select one {{ $self['label'] }} &mdash;</option>
     @foreach ($self->findOptions() as $key => $entry)

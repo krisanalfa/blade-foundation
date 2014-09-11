@@ -1,4 +1,11 @@
-<link rel="stylesheet" href="{{ Theme::base('vendor/blade-foundation/css/foundation-datepicker.css') }}">
+@section('head')
+    <script type="text/javascript" charset="utf-8" src="{{ Theme::base('vendor/blade-foundation/js/moment.js') }}"></script>
+    <script type="text/javascript" charset="utf-8" src="{{ Theme::base('vendor/blade-foundation/js/foundation-datepicker.js') }}"></script>
+@show
+
+@section('styler')
+    <link rel="stylesheet" href="{{ Theme::base('vendor/blade-foundation/css/foundation-datepicker.css') }}">
+@show
 
 <div id="{{ $id }}">
     <input
@@ -9,9 +16,6 @@
     >
     <input type="hidden" name="{{ $self['name'] }}" class="to-post" >
 </div>
-
-<script type="text/javascript" charset="utf-8" src="{{ Theme::base('vendor/blade-foundation/js/moment.js') }}"></script>
-<script type="text/javascript" charset="utf-8" src="{{ Theme::base('vendor/blade-foundation/js/foundation-datepicker.js') }}"></script>
 
 <script type="text/javascript">
     var $date = $('#{{ $id }} .datepicker'),

@@ -319,3 +319,9 @@ div.alert-box {
 .tt-suggestion p {
     margin: 0;
 }
+
+.login form {
+    max-width: 350px;
+    margin: 0 auto;
+    margin-top: 150px;
+}

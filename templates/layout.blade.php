@@ -38,7 +38,9 @@
 
 <body>
     <!-- NAVBAR -->
+    @section('navbar')
     @include('components.navbar')
+    @show
 
     <!-- NOTIFICATION -->
     {{ f('notification.show') }}

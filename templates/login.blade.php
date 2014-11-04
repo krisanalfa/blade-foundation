@@ -1,3 +1,5 @@
+@extends('layout')
+
 @section('navbar')
 @stop
 

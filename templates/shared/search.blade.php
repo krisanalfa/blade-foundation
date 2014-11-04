@@ -1,3 +1,5 @@
+@extends('layout')
+
 @section('content')
 <?php $schema = Norm::factory(f('controller.name'))->schema();?>
 <div class="row container">
@@ -23,13 +25,15 @@
                     @else
                         @foreach ($entries as $entry)
                             <tr>
+                                <?php $first = true; ?>
                                 @foreach ($schema as $name => $field)
                                     @if($field['hidden'] !== true)
                                         <td>
-                                             @if(reset($schema) === $field)
+                                             @if($first)
                                                  <a href="{{ f('controller.url', '/'.$entry['$id']) }}">
                                                      {{ $field->format('plain', $entry[$name], $entry) }}
                                                  </a>
+                                                 <?php $first = false; ?>
                                              @else
                                                  {{ $field->format('plain', $entry[$name], $entry) }}
                                              @endif

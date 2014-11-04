@@ -1,3 +1,5 @@
+@extends('layout')
+
 @section('content')
 <?php $schema = Norm::factory(f('controller.name'))->schema(); ?>
 <div class="row container">
@@ -6,7 +8,7 @@
             <form method="POST">
                 <ul class="breadcrumbs">
                     <li><a href="{{ URL::base() }}">Home</a></li>
-                    <li><a href="{{ f('controller.url') }}">{{ f('controller')->clazz }}</a></li>
+                    <li><a href="{{ f('controller.url') }}">{{ f('controller')->getClass() }}</a></li>
                     <li class="current"><a href="{{ URL::current() }}">Update</a></li>
                 </ul>
                 <fieldset>

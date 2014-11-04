@@ -1,3 +1,5 @@
+@extends('layout')
+
 @section('content')
 <div class="row container">
     <div class="top30">
@@ -5,7 +7,7 @@
             <form method="POST">
                 <ul class="breadcrumbs">
                     <li><a href="{{ URL::base() }}">Home</a></li>
-                    <li><a href="{{ f('controller.url') }}">{{ f('controller')->clazz }}</a></li>
+                    <li><a href="{{ f('controller.url') }}">{{ f('controller')->getClass() }}</a></li>
                     <li class="current"><a href="{{ URL::current() }}">Delete</a></li>
                 </ul>
                 <fieldset>

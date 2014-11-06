@@ -4,8 +4,12 @@
     "license": "MIT",
     "require": {
         "krisanalfa/blade-theme": "~0.5.72",
-        "krisanalfa/sleek-theme": "~0.5.2"
+        "krisanalfa/sleek-theme": "dev-master"
     },
+    "repositories": [{
+        "type": "vcs",
+        "url": "https://github.com/krisanalfa/sleek-theme.git"
+    }],
     "authors": [
         {
             "name": "Krisan Alfa Timur",

@@ -26,10 +26,6 @@
                         @endunless
                     @endforeach
 
-                    <div class="paginator-wrapper">
-                        {{ KrisanAlfa\Theme\Components\Pagination::create($entries)->paginate(); }}
-                    </div>
-
                     <div class="row top30">
                         <div class="right">
                             <a href="{{ f('controller.url', '/'.$entry['$id'].'/update') }}" class="button radius">Update</a>

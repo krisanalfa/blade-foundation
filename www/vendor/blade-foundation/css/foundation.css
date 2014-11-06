@@ -893,7 +893,8 @@ dl.sub-nav dd a { text-decoration: none; -webkit-border-radius: 1000px; -moz-bor
 dl.sub-nav dd.active a { font-weight: bold; background: #2ba6cb; color: #fff; padding: 3px 9px; cursor: default; }
 
 /* Pagination ---------------------- */
-ul.pagination { display: block; height: 24px; margin-left: -5px; }
+.paginator-centered { text-align: center; }
+ul.pagination { display: inline-block; height: 24px; margin: auto; margin-top: 10px; }
 ul.pagination li { float: left; display: block; height: 24px; color: #999; font-size: 14px; margin-left: 5px; }
 ul.pagination li a { display: block; padding: 1px 7px 1px; color: #555; }
 ul.pagination li:hover a, ul.pagination li a:focus { background: #e6e6e6; }

@@ -46,6 +46,10 @@
                 </tbody>
             </table>
         </div>
+
+        <div class="paginator-centered">
+            {{ KrisanAlfa\Theme\Components\Pagination::create($entries)->paginate(); }}
+        </div>
     </div>
 </div>
 @endsection

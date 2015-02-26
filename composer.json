@@ -3,8 +3,7 @@
     "description": "Blade Theme Based on Zurb Foundation",
     "license": "MIT",
     "require": {
-        "krisanalfa/blade-theme": "~0.5.72",
-        "krisanalfa/sleek-theme": "dev-master"
+        "krisanalfa/blade-theme": "~0.5.8"
     },
     "repositories": [{
         "type": "vcs",
